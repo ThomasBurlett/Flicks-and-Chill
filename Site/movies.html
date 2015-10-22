@@ -56,14 +56,64 @@
                 <div class="nav navbar-nav navbar-right" style=
                 "margin-left: 2em; padding-top: 9px">
                     <a href="login.html"><button class="btn btn-success" type=
-                    "submit">Login Here</button></a>
-					<a href="sign_up.html"><button class="btn btn-danger" type=
+                    "submit">Login Here</button></a> <a href=
+                    "sign_up.html"><button class="btn btn-danger" type=
                     "submit">Sign Up Here</button></a>
                 </div>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <div class="container-fluid">
+        <h2 style="float: left">Movie Database</h2>
+        <div class="dropdown" style="float:right">
+            <button aria-expanded="true" aria-haspopup="true" class=
+            "btn btn-default dropdown-toggle" data-toggle="dropdown" id=
+            "dropdownMenu1" type="button">Filter Movies <span class=
+            "caret"></span></button>
+            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                <li>
+                    <a href="#">Year Made</a>
+                </li>
+                <li>
+                    <a href="#">Genre</a>
+                </li>
+                <li>
+                    <a href="#">Rating</a>
+                </li>
+                <li>
+                    <a href="#">Price</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="well">
+        <div class="container-fluid">
+            <img alt="movieImage" src=
+            "http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg"
+            style="float: left; width: 121px; height: 180px;">
+            <h3><a href="#">Movie name</a></h3>
+            <p>Descriptive text</p>
+        </div>
+    </div>
+    <div class="well">
+        <div class="container-fluid">
+            <img alt="movieImage" src=
+            "http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg"
+            style="float: left; width: 121px; height: 180px;">
+            <h3><a href="#">Movie name</a></h3>
+            <p>Descriptive text</p>
+        </div>
+    </div>
+    <nav>
+        <ul class="pager">
+            <li>
+                <a href="#">Previous</a>
+            </li>
+            <li>
+                <a href="#">Next</a>
+            </li>
+        </ul>
+    </nav><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src=
     "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script> 
