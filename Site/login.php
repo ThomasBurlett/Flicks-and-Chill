@@ -29,12 +29,12 @@
                     <br>
                     <input autofocus="" class="form-control" name="Username" placeholder="Username" required="" type="text"> <input class="form-control" name="Password" placeholder="Password" required="" type="password"> <button class="btn btn-lg btn-primary btn-block" name="Submit" type="submit" value="Login">Login</button>
                     <p style="text-align: center;">
-                        Don't have an account? <a href="sign_up.html">Sign Up Here</a>
+                        Don't have an account? <a href="sign_up.php">Sign Up Here</a>
                     </p>
                 </form>
             </div>
         </div><br>
-        <a href="index.html">
+        <a href="index.php">
         <p style="text-align: center">
             Back to Home Page
         </p></a> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
