@@ -24,19 +24,19 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li>
-                            <a href="movies.html">Movies</a>
+                            <a href="movies.php">Movies</a>
                         </li>
                         <li>
-                            <a href="suggestions.html">Suggestions</a>
+                            <a href="suggestions.php">Suggestions</a>
                         </li>
                         <li>
-                            <a href="help.html">Help</a>
+                            <a href="help.php">Help</a>
                         </li>
                         <li>
-                            <a href="about_us.html">About Us</a>
+                            <a href="about_us.php">About Us</a>
                         </li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
@@ -45,7 +45,7 @@
                         </div><button class="btn btn-default" type="submit">Submit</button>
                     </form>
                     <div class="nav navbar-nav navbar-right" style="margin-left: 2em; padding-top: 9px">
-                        <a href="login.html"><button class="btn btn-success" type="submit">Login Here</button></a> <a href="sign_up.html"><button class="btn btn-danger" type="submit">Sign Up Here</button></a>
+                        <a href="login.php"><button class="btn btn-success" type="submit">Login Here</button></a> <a href="sign_up.php"><button class="btn btn-danger" type="submit">Sign Up Here</button></a>
                     </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -60,7 +60,7 @@
                     Press the button below to start exploring our selection!
                 </p>
                 <p>
-                    <a class="btn btn-primary btn-lg" href="movies.html" role="button">Click Here</a>
+                    <a class="btn btn-primary btn-lg" href="movies.php" role="button">Click Here</a>
                 </p>
             </div>
         </div><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

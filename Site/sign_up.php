@@ -35,12 +35,12 @@
                     </div><br>
                     <button class="btn btn-lg btn-primary btn-block" name="Submit" type="submit" value="Login">Sign Me Up!</button>
                     <p style="text-align: center;">
-                        Have an account? <a href="login.html">Login Here</a>
+                        Have an account? <a href="login.php">Login Here</a>
                     </p>
                 </form>
             </div>
         </div><br>
-        <a href="index.html">
+        <a href="index.php">
         <p style="text-align: center">
             Back to Home Page
         </p></a> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
