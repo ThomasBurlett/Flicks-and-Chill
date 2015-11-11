@@ -1,0 +1,12 @@
+Welcome to Flix and Chill.
+Welcome cinema enthusiasts! We are Netwerks© and bringing movies to our members is our thing! Our web service is dedicated to helping you find that movie you have been missing all this time. We offer the most premium movie catalogue service on the web. The admin and moderators of our site share the same enthusiasm that you do when it comes to being social and talking about what they love, movies! So get ready to relax, because we have done the searching for you.
+
+FAQ
+	How often do we update movie titles?
+	At the very minimum we strive for 1 per week.
+
+	Can you connect to Facebook?
+	This is a feature we hope to impliment soon.
+
+	All right, Ill give it a try.
+	No. Try not. Do... or do not. There is no try.

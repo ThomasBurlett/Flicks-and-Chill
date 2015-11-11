@@ -60,13 +60,13 @@
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-user bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="fname" name="name" placeholder="Movie Name" type="text">
+                                        <input class="form-control" id="fname" name="name" placeholder="Movie Title" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-user bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="lname" name="name" placeholder="Link to Movie Poster Image (JPEG only)" type="text">
+                                        <input class="form-control" id="lname" name="name" placeholder="Link to Movie Poster Image (Resizes to 120x180)" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -78,7 +78,7 @@
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="email" name="email" placeholder="Director" type="text">
+                                        <input class="form-control" id="email" name="email" placeholder="Rating" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
