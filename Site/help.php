@@ -52,45 +52,45 @@
         </nav>
         <div class="jumbotron">
             <div class="container" style="text-align: center">
-        <h1 style="text-align: center">Insert site description and help page explanation below.</h1>
-        <p style="text-align: center">Lorem ipsum dolar wtfarethesewordsinsertdumbboilerplatetextuntilifeellikeaddingrealstufftothepage</p>
+        <h1 style="text-align: center">Welcome to Flix and Chill.</h1>
+        <p style="text-align: center">Welcome cinema enthusiasts! We are Netwerks© and bringing movies to our members is our thing! Our web service is dedicated to helping you find that movie you have been missing all this time. We offer the most premium movie catalogue service on the web. The admin and moderators of our site share the same enthusiasm that you do when it comes to being social and talking about what they love, movies! So get ready to relax, because we have done the searching for you.</p>
     </div>
 </div>
         <div class="panel-group" id="accordion">
-        <div class="faqHeader">General questions</div>
+        <div class="faqHeader">FAQ</div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Insert stupid question here</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">How often do we update movie titles?</a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Insert answer here
+                    At the very minimum we strive for 1 per week. 
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Insert dumb question here</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Can you connect to Facebook?</a>
                 </h4>
             </div>
             <div id="collapseTen" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Insert dumb response
+                    This is a feature we hope to impliment soon.
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Wtf is worng with the site?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">All right, Ill give it a try.</a>
                 </h4>
             </div>
             <div id="collapseEleven" class="panel-collapse collapse">
                 <div class="panel-body">
-                    Nothing at all
+                    No. Try not. Do... or do not. There is no try.
                 </div>
             </div>
         </div>
