@@ -50,218 +50,94 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="container-fluid">
+
+        <?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "flicks_and_chill";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT * FROM movies ";
+$result = $conn->query($sql);
+
+
+
+echo '<div class="container-fluid">
             <h2 style="float: left">
                 Movie Database
             </h2><br>
             <div class="dropdown" style="float:right">
-                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Filter Movies <span class="caret"></span></button>
+                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Other Filters <span class="caret"></span></button>
                 <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
                     <li>
-                        <a href="#">Year Made</a>
+                        <a href="yearDescending.php">Year Descending</a>
                     </li>
                     <li>
-                        <a href="#">Genre</a>
+                        <a href="yearAscending.php">Year Ascending</a>
                     </li>
                     <li>
-                        <a href="#">Rating</a>
+                        <a href="rating.php">Rating</a>
                     </li>
                     <li>
-                        <a href="#">Price</a>
+                        <a href="price.php">Price</a>
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
+            <div class="dropdown" style="float:right">
+                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button"> Filter by Genre <span class="caret"></span></button>
+                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                    <li>
+                        <a href="action.php">Action</a>
+                    </li>
+                    <li>
+                        <a href="comedy.php">Comedy</a>
+                    </li>
+                    <li>
+                        <a href="horror.php">Horror</a>
+                    </li>
+                    <li>
+                        <a href="war.php">War</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <div class="well">
-            <div class="container-fluid">
-                <img alt="movieImage" src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX640_SY720_.jpg" style="float: left; width: 120px; height: 180px; margin-right: 20px;">
-                <h3>
-                    <a href="#">Anchorman: The Legend of Ron Burgundy</a>
-                </h3>
-                <h5>
-                    Rating: <span style="font-weight:normal;">10/10</span><br>
-                    Genre: <span style="font-weight:normal;">Comedy</span><br>
-                    Director: <span style="font-weight:normal;">Adam McKay</span><br>
-                    Year Released: <span style="font-weight:normal;">2004</span><br>
-                    Download Price: <span style="font-weight:normal;">$10.00</span>
-                </h5>
-                <p>
-                    Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the '70s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor.
-                </p>
-            </div>
-        </div>
-        <nav>
-            <ul class="pager">
-                <li>
-                    <a href="#">Previous</a>
-                </li>
-                <li>
-                    <a href="#">Next</a>
-                </li>
-            </ul>
-        </nav><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        </div>';
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        
+        echo '<div class="well">' . '<div class="container-fluid">'; 
+            echo '<img src="'.$row[imageURL].'" width="120" height="180" alt="';  echo '" style="float: left; width: 120px; height: 180px; margin-right: 20px;"/>';
+            echo '<h3>' . $row[title] . '</h3>';
+            echo '<h5> 
+                    Rating: <span style="font-weight:normal;">' . $row[rating]. '/10</span><br>
+                    Genre: <span style="font-weight:normal;">'. $row[genre]. '</span><br>
+                    Year Released: <span style="font-weight:normal;">' . $row[year]. '</span><br>
+                    Download Price: <span style="font-weight:normal;">$' . $row[price].'</span>
+                </h5>';
+            echo '<p>' .
+                    $row[description]
+                . '</p>';
+
+
+        echo '</div>' . '</div>';
+        
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
         </script> <!-- Include all compiled plugins (below), or include individual files as needed -->
          

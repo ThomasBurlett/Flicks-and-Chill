@@ -74,7 +74,7 @@
                         Martin Kohlman <small>Project Manager</small>
                     </h3>
                     <p>
-                        Short description of position
+                        
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
@@ -83,7 +83,7 @@
                         Chase Guggenheim <small>Technical Manager</small>
                     </h3>
                     <p>
-                       Short description of position
+                       
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
@@ -92,7 +92,7 @@
                         Thomas Burlett <small>Developer</small>
                     </h3>
                     <p>
-                        Short description of position
+                        
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
@@ -101,7 +101,7 @@
                         Logan Davey <small>Developer</small>
                     </h3>
                     <p>
-                        Short description of position
+                        
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
@@ -110,7 +110,7 @@
                         Miranda Irvin <small>Tester</small>
                     </h3>
                     <p>
-                        Short description of position
+                        
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
@@ -119,7 +119,7 @@
                         Alli Cline <small>SQL Developer/Tester</small>
                     </h3>
                     <p>
-                        Short description of position
+                        
                     </p>
                 </div>
             </div><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
