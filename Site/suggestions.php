@@ -54,55 +54,55 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="well well-sm">
-                        <form class="form-horizontal" method="post">
+                        <form class="form-horizontal" method="post" action ="insert.php">
                             <fieldset>
                                 <legend class="text-center header">Suggest a Movie</legend>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-user bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="fname" name="name" placeholder="Movie Title" type="text">
+                                        <input class="form-control" id="title" name="title" placeholder="Movie Title" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-user bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="lname" name="name" placeholder="Link to Movie Poster Image (Resizes to 120x180)" type="text">
+                                        <input class="form-control" id="imageURL" name="imageURL" placeholder="Link to Movie Poster Image (Resizes to 120x1802)" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="email" name="email" placeholder="Price" type="text">
+                                        <input class="form-control" id="price" name="price" placeholder="Price" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="email" name="email" placeholder="Rating" type="text">
+                                        <input class="form-control" id="rating" name="rating" placeholder="Rating" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="email" name="email" placeholder="Genre" type="text">
+                                        <input class="form-control" id="genre" name="genre" placeholder="Genre" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <input class="form-control" id="email" name="email" placeholder="Year of Release" type="text">
+                                        <input class="form-control" id="year" name="year" placeholder="Year of Release" type="text">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <span class="col-md-1 col-md-offset-2 text-center fa fa-pencil-square-o bigicon" style="font-style: italic"></span>
                                     <div class="col-md-8">
-                                        <textarea class="form-control" id="message" name="message" placeholder="Movie Descrption and Summary" rows="7">
+                                        <textarea class="form-control" id="description" name="description" placeholder="Movie Descrption and Summary" rows="7">
 </textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-12 text-center">
-                                        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                                        <input class="btn btn-primary btn-lg" type="submit">
                                     </div>
                                 </div>
                             </fieldset>
