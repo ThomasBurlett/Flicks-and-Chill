@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Nov 12, 2015 at 07:34 PM
+-- Generation Time: Nov 17, 2015 at 09:02 PM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -55,7 +55,8 @@ INSERT INTO `movies` (`title`, `imageURL`, `description`, `genre`, `year`, `rati
 ('Full Metal Jacket', 'http://ia.media-imdb.com/images/M/MV5BMjA4NzY4ODk4Nl5BMl5BanBnXkFtZTgwOTcxNTYxMTE@._V1_SX214_AL_.jpg', 'A pragmatic U.S. Marine observes the dehumanizing effects the U.S.-Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.\r\n', 'War', 1987, 8, 2),
 ('The Imitation Game', 'http://ia.media-imdb.com/images/M/MV5BNDkwNTEyMzkzNl5BMl5BanBnXkFtZTgwNTAwNzk3MjE@._V1_SY317_CR0,0,214,317_AL_.jpg', 'During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.\r\n', 'War', 2014, 8, 7),
 ('American Sniper', 'http://ia.media-imdb.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_SX214_AL_.jpg', 'Navy S.E.A.L. sniper Chris Kyle''s pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home to his wife and kids after four tours of duty, however, Chris finds that it is the war he can''t leave behind.\r\n', 'War', 2014, 7, 18),
-('Interstellar', 'http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX214_AL_.jpg', 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity''s survival.', 'Action', 2014, 9, 12);
+('Interstellar', 'http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX214_AL_.jpg', 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity''s survival.', 'Action', 2014, 9, 12),
+('Monty Python and the Holy Grail', 'http://ia.media-imdb.com/images/M/MV5BMTkzODczMTgwM15BMl5BanBnXkFtZTYwNTAwODI5._V1_SX214_AL_.jpg', 'King Arthur and his knights embark on a low-budget search for the Grail, encountering many, very silly obstacles.\r\n', 'Comedy', 1975, 8, 3);
 
 -- --------------------------------------------------------
 
