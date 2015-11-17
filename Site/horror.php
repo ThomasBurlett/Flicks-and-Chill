@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png" style="width: 200px; margin-top: -35px;"></a>
+                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="movies.php"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png" style="width: 200px; margin-top: -35px;"></a>
                 </div><!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -77,7 +77,7 @@ echo '<div class="container-fluid">
             </h2><br>
             <a style="float: right" href="movies.php"><button class="btn btn-info" type="submit">Reset Filter</button></a>
             <div class="dropdown" style="float:right">
-                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Other Filters <span class="caret"></span></button>
+                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Sort By <span class="caret"></span></button>
                 <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
                     <li>
                         <a href="yearDescending.php">Year Descending</a>
@@ -94,7 +94,7 @@ echo '<div class="container-fluid">
                 </ul>
             </div>
             <div class="dropdown" style="float:right">
-                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button"> Filter by Genre <span class="caret"></span></button>
+                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button"> Horror <span class="caret"></span></button>
                 <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
                     <li>
                         <a href="action.php">Action</a>
@@ -147,7 +147,7 @@ $conn->close();
         <script src="js/bootstrap.min.js">
         </script>
             <br><br>
-            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks &copy;</i>
+            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
             </p>
     </body>
 </html>
