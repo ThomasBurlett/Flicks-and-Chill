@@ -51,7 +51,7 @@
         <script src="js/bootstrap.min.js">
         </script>
         <br><br>
-            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks &copy;</i>
+            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
             </p>
     </body>
 </html>

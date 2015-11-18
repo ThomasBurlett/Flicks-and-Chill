@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png" style="width: 200px; margin-top: -35px;"></a>
+                    <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="movies.php"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png" style="width: 200px; margin-top: -35px;"></a>
                 </div><!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -69,7 +69,7 @@
                     </h2>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/11921893_1637257603225133_3487478332385114417_n.jpg?oh=d25d9398bf408c3421e42c1f98538abc&oe=56E7A11A" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Martin Kohlman <small>Project Manager</small>
                     </h3>
@@ -78,7 +78,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xla1/v/t1.0-9/1525385_10204944842973212_8939638214527180038_n.jpg?oh=ba3c97ea73e8c1473399dddf98969703&oe=56E58B4E" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Chase Guggenheim <small>Technical Manager</small>
                     </h3>
@@ -87,7 +87,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://pbs.twimg.com/profile_images/495039680245534720/cuN6DMAW_400x400.jpeg" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Thomas Burlett <small>Developer</small>
                     </h3>
@@ -96,7 +96,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11181849_769687209818993_8432542686474438085_n.jpg?oh=7a0e3bfa89692483b79aefd8df006f9d&oe=56EA6B89" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Logan Davey <small>Developer</small>
                     </h3>
@@ -105,7 +105,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10330317_734798203209362_478582670407013876_n.jpg?oh=50fd08493669a052a2e9c1ef2abf9d80&oe=56E5EE13" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Miranda Irvin <small>Tester</small>
                     </h3>
@@ -114,7 +114,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <img alt="" class="img-circle img-responsive img-center" src="http://placehold.it/200x200" style="margin-left: 75px">
+                    <img alt="" class="img-circle img-responsive img-center" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1491650_10201328889257351_6891308423900929420_n.jpg?oh=86485f67707f12f708b9002846ccc4f5&oe=56AFF821" style="margin-left: 75px" height="200px" width ="200px">
                     <h3>
                         Alli Cline <small>SQL Developer/Tester</small>
                     </h3>
@@ -130,7 +130,7 @@
             </script>
         </div>
         <br><br>
-            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks &copy;</i>
+            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
             </p>
     </body>
 </html>
