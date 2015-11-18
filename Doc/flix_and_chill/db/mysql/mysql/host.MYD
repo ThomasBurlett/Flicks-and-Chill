@@ -1,0 +1,6 @@
+150105 11:09:50 [Note] Event Scheduler: Loaded 0 events
+150105 11:09:50 [Note] C:\MAMP\\bin\mysql\bin\mysqld.exe: ready for connections.
+Version: '5.5.41-log'  socket: ''  port: 3306  Source distribution
+150105 11:10:01 [Note] C:\MAMP\\bin\mysql\bin\mysqld.exe: Normal shutdown
+
+150105 11:10:02 [Note] Event Scheduler: Purging the queue. 0 events
