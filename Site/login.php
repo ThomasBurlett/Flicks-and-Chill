@@ -17,7 +17,7 @@
     </head>
     <body>
         <p style="text-align:center; margin-top: -75px; margin-bottom: -50px;">
-            <img alt="Brand" src="http://i.imgur.com/bmVEUnC.png">
+            <a href="movies.php"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png"></a>
         </p>
         <div class="container">
             <div class="wrapper">

@@ -17,7 +17,7 @@
     </head>
     <body>
         <p style="text-align:center; margin-top: -75px; margin-bottom: -50px;">
-            <img alt="Brand" src="http://i.imgur.com/bmVEUnC.png">
+            <a href="movies.php"><img alt="Brand" src="http://i.imgur.com/bmVEUnC.png"></a>
         </p>
         <div class="container">
             <div class="wrapper">
@@ -32,8 +32,8 @@
                     <br>
                     <div class="input-group">
                         <input aria-describedby="basic-addon1" id="username" name="username" class="form-control" placeholder="Username" type="text"> 
-                        <input aria-describedby="basic-addon1" id="password" name="password" class="form-control" placeholder="Password" type="text"> 
-                        <input aria-describedby="basic-addon1" class="form-control" placeholder="Confirm Password" type="text"><br>
+                        <input aria-describedby="basic-addon1" id="password" name="password" class="form-control" placeholder="Password" type="password"> 
+                        <input aria-describedby="basic-addon1" class="form-control" placeholder="Confirm Password" type="password"><br>
                     </div><br>
                     <button class="btn btn-lg btn-primary btn-block" name="Submit" type="submit" value="Login">Sign Me Up!</button>
                     <p style="text-align: center;">
