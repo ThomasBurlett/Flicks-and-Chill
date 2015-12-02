@@ -39,43 +39,67 @@
                             <a href="about_us.php">About Us</a>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search" method="post" action="search.php?go"  id="searchform">
-                        <form action="users.php" method="GET">
-                            <input id="search" name="search" type="text" placeholder="Type here">
-                            <input id="submit" type="submit" value="Search">
-                        </form>
-                    </form>
+                    <div class="navbar-form navbar-left" role="search">
+                        <form  method="post" action="search.php?go"  id="searchform"> 
+                            <input  type="text" name="name"> 
+                            <input  type="submit" name="submit" value="Search"> 
+                        </form> 
+                    </div>
                     <div class="nav navbar-nav navbar-right" style="margin-left: 2em; padding-top: 9px">
                         <a href="login.php"><button class="btn btn-success" type="submit">Login Here</button></a> <a href="sign_up.php"><button class="btn btn-danger" type="submit">Sign Up Here</button></a>
                     </div>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-
         <?php 
-     
+             if(isset($_POST['submit'])){ 
+                 if(isset($_GET['go'])){ 
+                        if(preg_match("/^[  a-zA-Z]+/", $_POST['name'])){ 
+                             $name=$_POST['name']; 
+                             //connect  to the database 
+                             $db=mysql_connect  ("localhost", "root",  "root") or die ('I cannot connect to the database  because: ' . mysql_error()); 
+                             //-select  the database to use 
+                             $mydb=mysql_select_db("flicks_and_chill"); 
+                            //-query  the database table 
+                            $sql="SELECT  title, imageURL, description, genre, year, rating, price FROM movies WHERE title LIKE '%" . $name .  "%' OR title LIKE '%" . $name ."%'"; 
+                            //-run  the query against the mysql query function 
+                            $result=mysql_query($sql); 
+                            //-create  while loop and loop through result set 
+                            while($row=mysql_fetch_array($result)){ 
+                                   
+                                //-display the result of the array 
+                                echo '<div class="well">' . '<div class="container-fluid">'; 
+                                        echo '<img src="'.$row[imageURL].'" width="120" height="180" alt="';  echo '" style="float: left; width: 120px; height: 180px; margin-right: 20px;"/>';
+                                        echo '<h3>' . $row[title] . '</h3>';
+                                        echo '<h5> 
+                                                Rating: <span style="font-weight:normal;">' . $row[rating]. '/10</span><br>
+                                                Genre: <span style="font-weight:normal;">'. $row[genre]. '</span><br>
+                                                Year Released: <span style="font-weight:normal;">' . $row[year]. '</span><br>
+                                                Download Price: <span style="font-weight:normal;">$' . $row[price].'</span><br>
+                                                Buy It On Amazon: <span style="font-weight:normal;"><a href=http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=' . $row[title].'>http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=' . $row[title] . '</a></span>
+                                            </h5>';
+                                        echo '<p>' .
+                                                $row[description]
+                                            . '</p>';
 
-$connection = mysql_connect("localhost","root","root");
 
-mysql_select_db("flicks_and_chill")or die(mysql_error());
-
-$safe_value = mysql_real_escape_string($_POST['search']);
-
-$result = mysql_query("SELECT title FROM movies WHERE `title` LIKE %$safe_value%");
- while ($row = mysql_fetch_assoc($result)) {
-
- 
- }
-  ?> 
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                                    echo '</div>' . '</div>';
+                            } 
+                        } 
+                        else{ 
+                            echo  "<p>Please enter a search query</p>"; 
+                        } 
+                } 
+            } 
+          ?><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
         </script> <!-- Include all compiled plugins (below), or include individual files as needed -->
          
         <script src="js/bootstrap.min.js">
-        </script>
-            <br><br>
-            <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
-            </p>
+        </script><br>
+        <br>
+        <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px">
+            <i>Website Powered by Netwerks</i>
+        </p>
     </body>
 </html>

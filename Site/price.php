@@ -39,11 +39,12 @@
                             <a href="about_us.php">About Us</a>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Search" type="text">
-                        </div><button class="btn btn-default" type="submit">Submit</button>
-                    </form>
+                    <div class="navbar-form navbar-left" role="search">
+                        <form  method="post" action="search.php?go"  id="searchform"> 
+                            <input  type="text" name="name"> 
+                            <input  type="submit" name="submit" value="Search"> 
+                        </form> 
+                    </div>
                     <div class="nav navbar-nav navbar-right" style="margin-left: 2em; padding-top: 9px">
                         <a href="login.php"><button class="btn btn-success" type="submit">Login Here</button></a> <a href="sign_up.php"><button class="btn btn-danger" type="submit">Sign Up Here</button></a>
                     </div>
