@@ -50,95 +50,37 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-
-        <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "flicks_and_chill";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$link = mysqli_connect("localhost", "root", "root", "flicks_and_chill");
+ 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+ 
+// Escape user inputs for security
+$username = mysqli_real_escape_string($link, $_POST['username']);
+$password = mysqli_real_escape_string($link, $_POST['password']);
 
-$sql = "SELECT * FROM movies ";
-$result = $conn->query($sql);
-
-
-
-echo '<div class="container-fluid">
-            <h2 style="float: left">
-                Movie Database
-            </h2><br>
-            <div class="dropdown" style="float:right">
-                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Sort By <span class="caret"></span></button>
-                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
-                    <li>
-                        <a href="yearDescending.php">Year Descending</a>
-                    </li>
-                    <li>
-                        <a href="yearAscending.php">Year Ascending</a>
-                    </li>
-                    <li>
-                        <a href="rating.php">Rating</a>
-                    </li>
-                    <li>
-                        <a href="price.php">Price</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="dropdown" style="float:right">
-                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button"> Filter by Genre <span class="caret"></span></button>
-                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
-                    <li>
-                        <a href="action.php">Action</a>
-                    </li>
-                    <li>
-                        <a href="comedy.php">Comedy</a>
-                    </li>
-                    <li>
-                        <a href="horror.php">Horror</a>
-                    </li>
-                    <li>
-                        <a href="war.php">War</a>
-                    </li>
-                </ul>
-            </div>
-        </div>';
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        
-        echo '<div class="well">' . '<div class="container-fluid">'; 
-            echo '<img src="'.$row[imageURL].'" width="120" height="180" alt="';  echo '" style="float: left; width: 120px; height: 180px; margin-right: 20px;"/>';
-            echo '<h3>' . $row[title] . '</h3>';
-            echo '<h5> 
-                    Rating: <span style="font-weight:normal;">' . $row[rating]. '/10</span><br>
-                    Genre: <span style="font-weight:normal;">'. $row[genre]. '</span><br>
-                    Year Released: <span style="font-weight:normal;">' . $row[year]. '</span><br>
-                    Download Price: <span style="font-weight:normal;">$' . $row[price].'</span><br>
-                    Buy It On Amazon: <span style="font-weight:normal;"><a href=http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=' . $row[title].'>http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=' . $row[title] . '</a></span>
-                </h5>';
-            echo '<p>' .
-                    $row[description]
-                . '</p>';
-
-
-        echo '</div>' . '</div>';
-        
-    }
-} else {
-    echo "0 results";
+ 
+// attempt insert query execution
+$sql = "INSERT INTO users (username, password, accountType) VALUES ('$username', '$password' , 1)";
+echo '<div class="well">' . '<div class="container-fluid" style="text-align: center">';
+if(mysqli_query($link, $sql)){
+    echo '<h3>' . "Your account has been created please click on one of the buttons below to return to your desired page!" . '</h3>';
+} else{
+    echo "ERROR: Account not created. Please retry! $sql. " . mysqli_error($link);
 }
 
-$conn->close();
+echo '<br><a href="login.php" stye="float: left"><button class="btn btn-success" type="submit">Login Here</button></a><p>   </p>'; 
+echo '<a href="movies.php"><button class="btn btn-success" type="submit">Back to Movies</button></a>';
+echo '</div>' . '</div>';
+// close connection
+mysqli_close($link);
 ?>
-
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
         </script> <!-- Include all compiled plugins (below), or include individual files as needed -->
          

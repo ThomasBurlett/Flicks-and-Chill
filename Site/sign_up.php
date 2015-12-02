@@ -21,7 +21,7 @@
         </p>
         <div class="container">
             <div class="wrapper">
-                <form action="" class="form-signin" id="Login_Form" method="post" name="Login_Form">
+                <form action="new_account.php" class="form-signin" id="Login_Form" method="post" name="Login_Form">
                     <h3 class="form-signin-heading">
                         Welcome to Flicks and Chill!
                     </h3>
@@ -31,7 +31,9 @@
                     <hr class="colorgraph">
                     <br>
                     <div class="input-group">
-                        <input aria-describedby="basic-addon1" class="form-control" placeholder="Username" type="text"> <input aria-describedby="basic-addon1" class="form-control" placeholder="Password" type="text"> <input aria-describedby="basic-addon1" class="form-control" placeholder="Confirm Password" type="text"><br>
+                        <input aria-describedby="basic-addon1" id="username" name="username" class="form-control" placeholder="Username" type="text"> 
+                        <input aria-describedby="basic-addon1" id="password" name="password" class="form-control" placeholder="Password" type="text"> 
+                        <input aria-describedby="basic-addon1" class="form-control" placeholder="Confirm Password" type="text"><br>
                     </div><br>
                     <button class="btn btn-lg btn-primary btn-block" name="Submit" type="submit" value="Login">Sign Me Up!</button>
                     <p style="text-align: center;">

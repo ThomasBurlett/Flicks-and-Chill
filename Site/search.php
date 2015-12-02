@@ -5,7 +5,7 @@
         <meta content="IE=edge" http-equiv="X-UA-Compatible">
         <meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>
-            Flicks and Chill-Home
+            Flicks and Chill-Movies
         </title><!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +23,7 @@
                 </div><!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li>
@@ -39,10 +39,11 @@
                             <a href="about_us.php">About Us</a>
                         </li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Search" type="text">
-                        </div><button class="btn btn-default" type="submit">Submit</button>
+                    <form class="navbar-form navbar-left" role="search" method="post" action="search.php?go"  id="searchform">
+                        <form action="users.php" method="GET">
+                            <input id="search" name="search" type="text" placeholder="Type here">
+                            <input id="submit" type="submit" value="Search">
+                        </form>
                     </form>
                     <div class="nav navbar-nav navbar-right" style="margin-left: 2em; padding-top: 9px">
                         <a href="login.php"><button class="btn btn-success" type="submit">Login Here</button></a> <a href="sign_up.php"><button class="btn btn-danger" type="submit">Sign Up Here</button></a>
@@ -50,70 +51,30 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <div class="jumbotron">
-            <div class="container" style="text-align: center">
-                <h1>
-                    Welcome to Flicks and Chill!
-                </h1>
-                <p>
-                    This catalog has a list of some of the best movies out there.<br>
-                    Press the button below to start exploring our selection!
-                </p>
-                <p>
-                    <a class="btn btn-primary btn-lg" href="movies.php" role="button">Click Here</a>
-                </p>
-            </div>
-        </div>
-        <div class="container">
 
-            <div class="row">
+        <?php 
+     
 
-                    
-                <?php
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "flicks_and_chill";
+$connection = mysql_connect("localhost","root","root");
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+mysql_select_db("flicks_and_chill")or die(mysql_error());
 
-$sql = "SELECT * FROM movies ";
-$result = $conn->query($sql);
+$safe_value = mysql_real_escape_string($_POST['search']);
 
+$result = mysql_query("SELECT title FROM movies WHERE `title` LIKE %$safe_value%");
+ while ($row = mysql_fetch_assoc($result)) {
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        
-            echo '<div class="col-lg-3 col-md-4 col-xs-6 thumb">';  echo '<a class="thumbnail" href="movies.php">
-                        <img width="160" height="220" class="img-responsive" src="' . $row[imageURL] .'" alt=""></a></div>';      
-    }
-} else {
-    echo "0 results";
-}
+ 
+ }
+  ?> 
 
-$conn->close();
-?>
-</div></div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
         </script> <!-- Include all compiled plugins (below), or include individual files as needed -->
          
         <script src="js/bootstrap.min.js">
         </script>
-        <br><br>
+            <br><br>
             <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
             </p>
     </body>

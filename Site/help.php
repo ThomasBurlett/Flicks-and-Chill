@@ -52,7 +52,7 @@
         </nav>
         <div class="jumbotron">
             <div class="container" style="text-align: center">
-        <h1 style="text-align: center">Welcome to Flix and Chill.</h1>
+        <h1 style="text-align: center">Welcome to Flicks and Chill.</h1>
         <p style="text-align: center">Welcome cinema enthusiasts! We are Netwerks© and bringing movies to our members is our thing! Our web service is dedicated to helping you find that movie you have been missing all this time. We offer the most premium movie catalogue service on the web. The admin and moderators of our site share the same enthusiasm that you do when it comes to being social and talking about what they love, movies! So get ready to relax, because we have done the searching for you.</p>
     </div>
 </div>
