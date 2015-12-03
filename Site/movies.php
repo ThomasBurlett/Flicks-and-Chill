@@ -70,6 +70,7 @@ $result = $conn->query($sql);
 
 
 
+
 echo '<div class="container-fluid">
             <h2 style="float: left">
                 Movie Database
@@ -108,12 +109,52 @@ echo '<div class="container-fluid">
                     </li>
                 </ul>
             </div>
+        </div>
+        <br>
+        <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title" style="text-align: center; color: #FF6F0D;">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><div class="container">
+         
+  <button type="button" class="btn btn-warning">Click Here to Comment</button>
+</div></a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <form class="form-horizontal" method="post" action ="comment_success.php">
+                            <fieldset>
+                                <legend class="text-center header">Leave your comment below!</legend>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center fa fa-envelope-o bigicon" style="font-style: italic"></span>
+                                    <div class="col-md-6">
+                                        <input class="form-control" id="title" name="title" placeholder="Movie Title" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center fa fa-pencil-square-o bigicon" style="font-style: italic"></span>
+                                    <div class="col-md-6">
+                                        <textarea class="form-control" id="comment" name="comment" placeholder="Comment here!" rows="5">
+</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <input class="btn btn-primary btn-lg" type="submit">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form> 
+                </div>
+            </div>
+        </div>
         </div>';
-
+$count = 0;
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        
+        $title = $row[title];
         echo '<div class="well">' . '<div class="container-fluid">'; 
             echo '<img src="'.$row[imageURL].'" width="120" height="180" alt="';  echo '" style="float: left; width: 120px; height: 180px; margin-right: 20px;"/>';
             echo '<h3>' . $row[title] . '</h3>';
@@ -129,8 +170,34 @@ if ($result->num_rows > 0) {
                 . '</p>';
 
 
-        echo '</div>' . '</div>';
+        echo '<br><div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: white;" id="drop">
+                <h4 class="panel-title" style="color: #00AEFF;">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse' . $count . '">View Comments</a>
+                </h4>
+            </div>
+            <div id="collapse' . $count . '" class="panel-collapse collapse">
+                <div class="panel-body">';
+$sql_comment = "SELECT * FROM comments ";
+$result_comment = $conn->query($sql_comment);
+                     if ($result_comment->num_rows > 0) {
+    // output data of each row
+    while($row1 = $result_comment->fetch_assoc()) {
         
+        if($row1[title] == $row[title]) {
+            echo '<div class="well">';
+        echo "<b>Anonymous User:</b><br>" . $row1[comment] . "<br></div>";
+
+    }
+
+    }
+}
+            echo    '</div>
+            </div>
+        </div>
+        </div>' . '</div>' . '</div>';
+        $count = $count + 1;
     }
 } else {
     echo "0 results";
@@ -148,5 +215,30 @@ $conn->close();
             <br><br>
             <p style=" bottom: 0; width:100%; text-align: center; font-size: 12px"><i>Website Powered by Netwerks </i>
             </p>
+             <style>
+    #drop [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "^"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+    #drop [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    }
+</style>
     </body>
 </html>

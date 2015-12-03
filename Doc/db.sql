@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Dec 02, 2015 at 05:48 AM
+-- Generation Time: Dec 03, 2015 at 06:06 AM
 -- Server version: 5.5.42
 -- PHP Version: 5.6.10
 
@@ -13,6 +13,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `flicks_and_chill`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `title` text NOT NULL,
+  `comment` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`title`, `comment`) VALUES
+('The Dark Knight', 'Bruce Wayne is the Batman.'),
+('The Dark Knight', 'How did nobody in the movie figure out that Bruce Wayne is Batman?'),
+('Star Wars: Episode V - The Empire Strikes Back', 'ITS A TRAP'),
+('Star Wars: Episode V - The Empire Strikes Back', 'INSERT WOOKIE NOISE'),
+('Star Wars: Episode V - The Empire Strikes Back', 'Join the dark side for free cookies.'),
+('Inception', 'We have to go deeper.'),
+('Interstellar', 'MUUUUURRRRPPPPHH!');
 
 -- --------------------------------------------------------
 
